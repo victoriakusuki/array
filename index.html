@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+  
+
+<script>
+
+
+// Array de planetas
+const planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
+
+// Solicitar ao usuário que digite o nome de um planeta
+const planetaUsuario = prompt("Digite o nome de um planeta:");
+
+// Verificar se o planeta digitado pelo usuário está na lista
+if (planetas.includes(planetaUsuario)) {
+    alert(planetaUsuario + " está na lista de planetas!");
+} else {
+    alert(planetaUsuario + " não está na lista de planetas.");
+}
+
+
+
+
+///////////////
+
+
+
+// um array vazio para armazenar os estudantes
+const estudantes = [];
+
+// Função para cadastrar um estudante
+function cadastrarEstudante() {
+    const nome = prompt("Digite o nome do estudante (ou 'PARE' para encerrar):");
+
+    if (nome && nome.toUpperCase() !== "PARE") {
+        estudantes.push(nome);
+        cadastrarEstudante(); // Chama a função novamente para cadastrar mais estudantes
+    } else {
+        // Quando o usuário digitar "PARE" ou deixar em branco
+        mostrarEstudantes();
+    }
+}
+
+// Função para mostrar a quantidade de estudantes e a lista deles
+function mostrarEstudantes() {
+    alert("Quantidade de estudantes cadastrados: " + estudantes.length + "\nLista de estudantes: \n" + estudantes.join("\n"));
+}
+
+// Iniciar o processo de cadastro
+cadastrarEstudante();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
